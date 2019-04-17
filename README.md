@@ -1,5 +1,7 @@
 # always-latest-tweets-for-mobile-twitter
 
+Auto-switch to latest Twitter for mobile version.
+
 ## Install
 
 * https://greasyfork.org/en/scripts/381962-always-latest-tweets-for-mobile-twitter
