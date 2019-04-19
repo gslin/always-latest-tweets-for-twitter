@@ -1,6 +1,6 @@
 # always-latest-tweets-for-mobile-twitter
 
-Auto-switch to latest Twitter for mobile version.
+Auto-switch to latest Twitter for mobile version (i.e. https://mobile.twitter.com).
 
 ## Install
 
