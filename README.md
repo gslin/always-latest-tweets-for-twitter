@@ -4,7 +4,7 @@ Auto-switch to latest tweets for mobile version Twitter (i.e. https://mobile.twi
 
 ## Install
 
-* https://greasyfork.org/en/scripts/381962-always-latest-tweets-for-mobile-twitter
+* https://greasyfork.org/en/scripts/381962-always-latest-tweets-for-mobile-twitter (auto-updating)
 * https://openuserjs.org/scripts/gslin/Always_Latest_Tweets_for_Mobile_Twitter
 
 ## Limitation
