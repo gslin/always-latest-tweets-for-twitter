@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Always Latest Tweets for Mobile Twitter
 // @namespace    https://github.com/gslin/always-latest-tweets-for-mobile-twitter
-// @version      0.20190417.0
+// @version      0.20190419.0
 // @description  Auto-switch to latest tweets for mobile version Twitter
 // @author       Gea-Suan Lin <darkkiller@gmail.com>
 // @match        https://mobile.twitter.com/*
@@ -28,6 +28,10 @@
                 }
             }
         });
+
+        if (document.querySelector('div[aria-label="Timeline: Your Home Timeline"]')) {
+            ob.disconnect();
+        }
     });
 
     ob.observe(document, {
