@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Always Latest Tweets for Mobile Twitter
 // @namespace    https://github.com/gslin/always-latest-tweets-for-mobile-twitter
-// @version      0.20190501.0
+// @version      0.20200108.0
 // @description  Auto-switch to latest tweets for mobile version Twitter
 // @author       Gea-Suan Lin <darkkiller@gmail.com>
 // @match        https://mobile.twitter.com/*
@@ -15,9 +15,10 @@
     'use strict';
 
     let ob = new window.MutationObserver(ml => {
-        if (ml.filter(el => document.evaluate('.//h2/span[text() = "Home"]', el.target, null, XPathResult.ANY_TYPE, null).iterateNext()).length > 0) {
-            document.querySelector('div[aria-label="Top Tweets on"]').click();
-            return;
+        // If it's already in latest timeline, uninstall observer.
+        if (document.querySelector('div[aria-label="Timeline: Your Home Timeline"]')) {
+            console.debug('Already on latest timeline');
+            ob.disconnect();
         }
 
         ml.forEach(el => {
@@ -25,13 +26,19 @@
                 for (let span of el.target.getElementsByTagName('span')) {
                     if ('See latest Tweets instead' == span.innerText) {
                         span.click();
+                        return;
                     }
                 }
             }
         });
 
-        if (document.querySelector('div[aria-label="Timeline: Your Home Timeline"]')) {
-            ob.disconnect();
+        let star_el = document.querySelector('main div[data-testid="primaryColumn"] h2');
+        if (star_el && 'Home' === star_el.innerText) {
+            let el = document.querySelector('div[aria-label="Top Tweets on"]');
+            if (el) {
+                el.click();
+                return;
+            }
         }
     });
 
