@@ -4,8 +4,8 @@ Auto-switch to latest tweets for Twitter (i.e. https://twitter.com/ and https://
 
 ## Install
 
-* https://greasyfork.org/en/scripts/381962-always-latest-tweets-for-mobile-twitter (auto-updating)
-* https://openuserjs.org/scripts/gslin/Always_Latest_Tweets_for_Mobile_Twitter
+* https://greasyfork.org/en/scripts/395725-always-latest-tweets-for-twitter (auto-updating)
+* https://openuserjs.org/scripts/gslin/Always_Latest_Tweets_for_Twitter
 
 ## Limitation
 
