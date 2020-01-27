@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name         Always Latest Tweets for Mobile Twitter
-// @namespace    https://github.com/gslin/always-latest-tweets-for-mobile-twitter
-// @version      0.20190710.0
-// @description  Auto-switch to latest tweets for mobile version Twitter
+// @name         Always Latest Tweets for Twitter
+// @namespace    https://github.com/gslin/always-latest-tweets-for-twitter
+// @version      0.20200128.0
+// @description  Auto-switch to latest tweets for Twitter
 // @author       Gea-Suan Lin <darkkiller@gmail.com>
 // @match        https://mobile.twitter.com/*
+// @match        https://twitter.com/*
 // @grant        none
 // @run-at       document-start
 // @license      MIT
