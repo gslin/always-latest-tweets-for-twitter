@@ -12,25 +12,25 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
+  'use strict';
 
-    let ob = new window.MutationObserver(ml => {
-        // If it's already in "Following" timeline, uninstall the observer.
-        if (document.querySelector('nav[role="navigation"] div[role="presentation"]:nth-child(2) a[aria-selected="true"]')) {
-            console.debug('Already on following timeline.');
-            ob.disconnect();
-        }
+  let ob = new window.MutationObserver(ml => {
+    // If it's already in "Following" timeline, uninstall the observer.
+    if (document.querySelector('nav[role="navigation"] div[role="presentation"]:nth-child(2) a[aria-selected="true"]')) {
+      console.debug('Already on following timeline.');
+      ob.disconnect();
+    }
 
-        ml.forEach(el => {
-            const tab = document.querySelector('nav[role="navigation"] div[role="presentation"]:nth-child(2) a[aria-selected="false"]');
-            if (tab) {
-                tab.click();
-            }
-        });
+    ml.forEach(el => {
+      const tab = document.querySelector('nav[role="navigation"] div[role="presentation"]:nth-child(2) a[aria-selected="false"]');
+      if (tab) {
+        tab.click();
+      }
     });
+  });
 
-    ob.observe(document, {
-        childList: true,
-        subtree: true,
-    });
+  ob.observe(document, {
+    childList: true,
+    subtree: true,
+  });
 })();
