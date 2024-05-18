@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Always Latest Tweets for Twitter
 // @namespace    https://github.com/gslin/always-latest-tweets-for-twitter
-// @version      0.20230122.0
+// @version      0.20240519.0
 // @description  Auto-switch to latest tweets for Twitter
 // @author       Gea-Suan Lin <darkkiller@gmail.com>
 // @match        https://mobile.twitter.com/*
 // @match        https://twitter.com/*
+// @match        https://x.com/*
 // @grant        none
 // @run-at       document-start
 // @license      MIT
